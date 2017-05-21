@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<h1>{{ site.title }} Releases</h1>
+
+<ul>
+  {% for post in site.posts %}
+  <li>
+    <h3>
+      <a href="{{ post.url }}">{{ post.title }} ({{ post.build }})</a>
+      <span>{{ post.date | date: "%b %-d, %Y" }}</span>
+    </h3>
+    <p>{{ post.content }}</p>
+  </li>
+  {% endfor %}
+</ul>

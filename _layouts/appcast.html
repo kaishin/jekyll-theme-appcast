@@ -1,0 +1,20 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>{{ site.title }} Releases</title>
+    <description>Most recent {{ site.title }} releases</description>
+    <link>{{ site.url }}{{ site.baseurl }}/feed.xml</link>
+    {% for post in site.posts %}
+    <item>
+      <title>{{ post.title | xml_escape }} ({{ post.build }})</title>
+      <description>{{ post.content | xml_escape }}</description>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <enclosure url="{{ post.enclosure }}" sparkle:version="{{ post.build }}" sparkle:shortVersionString="{{ post.version }}" length="{{ post.size }}" type="application/octet-stream" />
+      <sparkle:minimumSystemVersion>10.10</sparkle:minimumSystemVersion>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
