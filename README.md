@@ -1,5 +1,3 @@
-# appcast
-
 A Jekyll theme to generate macOS appcast feeds and release pages.
 
 ## Installation
@@ -26,26 +24,44 @@ Or install it yourself as:
 
 ## Usage
 
-This theme comes with 2 important layouts:
+This theme comes with 2 layouts:
 
-- *appcast*: A template of an XML-based, Sparkle-compatible appcast.
-- *releases*: A template of an HTML list of all past releases.
+- *_layouts/appcast*: A template of an XML-based, Sparkle-compatible appcast.
+- *_layouts/changelog*: A template of an HTML list of all past releases.
 
-### Configuration:
+To use these layouts, create a new file withe the desired extension (`.xml` for the appcast and `.html` or `.md` for the HTML) and add the name of the layput in the YAML front matter.
 
-TODO
+Example:
 
-## Contributing
+```yaml
+---
+layout: appcast
+---
+```
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/kaishin/jekyll-theme-appcast. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+You can also configure the pages using one of the templates with the following settings:
 
-## Development
+For `appcast`:
 
-To set up your environment to develop this theme, run `bundle install`.
+```yaml
+---
+layout: appcast
+custom_feed_title: "My custom feed title"
+custom_feed_description: "My custom feed description"
+default_minimum_system_version: 10.10
+language_code: "jp"
+---
+```
 
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+For `changelog`:
 
-When your theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be released.
+```yaml
+---
+layout: changelog
+custom_title: "My Demo App's Changelog"
+custom_css_class: "demp-app"
+---
+```
 
 ## License
 

@@ -1,3 +1,7 @@
 ---
 layout: appcast
+custom_feed_title: "My custom feed title"
+custom_feed_description: "My custom feed description"
+default_minimum_system_version: 10.10
+language_code: "jp"
 ---
