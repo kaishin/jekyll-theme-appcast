@@ -1,4 +1,4 @@
-A Jekyll theme to generate macOS appcast feeds and release pages.
+A Jekyll theme to generate macOS appcast feeds and changelog pages.
 
 ## Installation
 
@@ -26,7 +26,7 @@ Or install it yourself as:
 
 This theme comes with 2 layouts:
 
-- *_layouts/appcast*: A template of an XML-based, Sparkle-compatible appcast.
+- *_layouts/appcast*: A template of an XML-based, [Sparkle](https://sparkle-project.org)-compatible appcast.
 - *_layouts/changelog*: A template of an HTML list of all past releases.
 
 To use these layouts, create a new file withe the desired extension (`.xml` for the appcast and `.html` or `.md` for the HTML) and add the name of the layput in the YAML front matter.
