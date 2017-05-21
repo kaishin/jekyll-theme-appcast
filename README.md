@@ -63,6 +63,24 @@ custom_css_class: "demp-app"
 ---
 ```
 
+To add an entry, simply create a post with the following format:
+
+```yaml
+---
+date: 2017-02-04 00:00:00 +0100
+enclosure_url: https://someeclosure.example.com/mydemoapp.zip
+minimum_system_version: 10.10
+short_version_string: 1.5.0
+size: 7340
+subtitle: "Awesome Update Subtitle"
+title: "Version 1.5.0"
+version: 100
+---
+
+- *NEW* New feature goes here.
+- *FIX* Bug fix goes here.
+```
+
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
