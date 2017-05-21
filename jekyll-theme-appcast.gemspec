@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["hello@redalemeden.com"]
 
   spec.summary       = "A Jekyll theme to generate macOS appcasts."
-  spec.homepage      = "httops://github.com/kaishin/jekyll-theme-appcast"
+  spec.homepage      = "https://github.com/kaishin/jekyll-theme-appcast"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(_layouts|LICENSE|README)}i) }
